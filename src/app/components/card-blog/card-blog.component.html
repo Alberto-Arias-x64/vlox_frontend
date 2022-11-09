@@ -1,0 +1,9 @@
+<div class="card">
+    <img [src]="data.icon" alt="">
+    <div>
+        <h3>{{data.title}}</h3>
+        <p> <img src="assets/images/icons/heart.png" alt=""> {{data.likes}}</p>
+    </div>
+    <p>{{data.description}}</p>
+    <button (click)="onSubmit(data.id)" >{{data.button}}</button>
+</div>

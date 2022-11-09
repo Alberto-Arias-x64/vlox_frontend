@@ -1,0 +1,12 @@
+<section>
+    <div id="post">
+        <div id="title" class="bold">
+            <img [src]="data.icon" id="bg_image" alt="">
+            <div id="data" (click)="addLike()">
+                <h1>{{data.title}} </h1> 
+                <p id="like"> <img [src]="liked? 'assets/images/icons/heart.png':'assets/images/icons/unheart.png'" alt="like"> Likes: {{data.likes}}</p>
+            </div>
+        </div>
+        <span>{{data.description}}</span>
+    </div>
+</section>

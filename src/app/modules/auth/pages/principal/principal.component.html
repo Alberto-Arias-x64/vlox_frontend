@@ -1,0 +1,10 @@
+<section>
+    <div id="side_panel">
+        <app-card *ngFor="let datos of data" [data]="datos"></app-card>
+    </div>
+    <div id="data_container">
+        <div class="data"><h3>Utimo post:</h3> <pre>   </pre> <h4>{{lastPost}}</h4></div>
+        <div class="data"><h3>Total de Likes:</h3> <pre>   </pre> <h4>{{totalLikes}}</h4></div>
+        <button (click)="logout()">Salir</button>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+<div [ngStyle]="{backgroundColor: contend.color}" class="container">
+    <div [class]="direction ? 'slide_left':'slide_right'">
+        <div> <!-- direction && {order: 1} -->
+            <h2 class="bold">{{contend.title}}</h2>
+            <h4>{{contend.contend}}</h4>
+        </div>
+        <picture>
+            <img #sourceImg alt="">
+        </picture>
+    </div>
+</div>

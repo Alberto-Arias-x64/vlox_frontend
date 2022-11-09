@@ -1,0 +1,17 @@
+<section>
+    <app-list *ngIf="!editMode; else elseEdit " buttonText="edit" color="#AEC5EB" (signal)="edit($event)"></app-list>
+    <ng-template #elseEdit>
+        <form id="add" (ngSubmit)="onSubmit(postForm.value)" #postForm="ngForm">
+            <h1>Edita tu post</h1>
+            <input ngModel name="title" id="title" type="text" placeholder="Titulo" autofocus autocomplete="off" required="true">
+            <textarea ngModel name="contend" rows="15" placeholder="contendio" required="true"></textarea>
+            <input ngModel name="image"  type="file" accept="image/png, image/jpeg">
+            <button [disabled]="!postForm.valid || sending" >
+                <p *ngIf="!sending; else elseBlock ">Publicar</p>
+                <ng-template #elseBlock>
+                    <div class="spinner"></div>
+                </ng-template>
+            </button>
+        </form>
+    </ng-template>
+</section>

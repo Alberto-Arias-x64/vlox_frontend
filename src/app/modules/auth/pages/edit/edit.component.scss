@@ -1,0 +1,52 @@
+section{
+    min-height: calc(100vh - 180px);
+    height: fit-content;
+}
+#add{
+    max-width: 1500px;
+    width: 100%;
+    margin: 1rem;
+    margin-top: 5rem;
+    height: calc(100% - 180px);
+    min-height: 600px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    border: 1px solid black;
+}
+#title{
+    font-size: 2rem;
+}
+input{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    min-height: 60%;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner{
+    width: 2ch;
+    height: 2ch;
+    border: 2px solid black;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin forwards 1000ms infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

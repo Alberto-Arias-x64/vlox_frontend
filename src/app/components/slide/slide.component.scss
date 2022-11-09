@@ -1,0 +1,40 @@
+@mixin default {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container {
+    width: 100vw;
+    min-height: 300px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+picture {
+    width: 300px;
+    height: 100%;
+}
+
+.slide_right {
+    @include default();
+    grid-template-columns: auto min-content;
+    text-align: right;
+}
+
+.slide_left {
+    @include default();
+    grid-template-columns: min-content auto;
+    div {grid-column: 2;}
+    picture {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}

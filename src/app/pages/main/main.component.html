@@ -1,0 +1,8 @@
+<div id="title" #background>
+    <h1>Posiciona tu negocio en internet</h1>
+    <h3>Publica tu pasion con todo el mundo</h3>
+    <div id="img_1" #image>
+        <img src="assets/images/idea.png" alt="">
+    </div>
+</div>
+<app-slide *ngFor="let slide of slides; even as isEven" [contend]="slide" [direction]="isEven"></app-slide>

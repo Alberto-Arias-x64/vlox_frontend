@@ -1,0 +1,17 @@
+<header #header>
+    <div id="header_container" (mouseleave)="hideModal()">
+        <div id="header_logo">
+            <img src="assets/favico/android-chrome-192x192.png" alt="">
+            <h2 (click)="changeView('')" (mouseenter)="showModal()" [ngStyle]="{position:'relative',top:'-2px'}">Vlox &#9205;</h2>
+            <div id="header_modal_container">
+                <div id="header_modal">
+                    <a routerLink="" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Home</a>
+                    <a routerLink="blog" routerLinkActive="active">Blog</a>
+                    <a routerLink="services" routerLinkActive="active">Services</a>
+                    <a routerLink="contact" routerLinkActive="active">Contact</a>
+                </div>
+            </div>
+        </div>
+        <button (click)="changeView('contact')">Contactar</button>
+    </div>
+</header>

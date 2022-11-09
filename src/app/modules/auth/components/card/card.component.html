@@ -1,0 +1,5 @@
+<div>
+    <img [src]="data.icon" alt="">
+    <h2>{{data.title}}</h2>
+    <button (click)="onClick(data.url)" [ngStyle]="{backgroundColor:data.color}">{{data.button}}</button>
+</div>

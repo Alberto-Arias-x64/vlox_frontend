@@ -1,0 +1,5 @@
+<div *ngFor="let post of postList">
+    <h3>{{post.title}}</h3>
+    <p>{{post.createdAt | timeago }}</p>
+    <button (click)="action(post.id)" [ngStyle]="{backgroundColor : color}" >{{buttonText}}</button>
+</div>

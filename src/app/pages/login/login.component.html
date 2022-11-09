@@ -1,0 +1,10 @@
+<section>
+    <form (ngSubmit)="send(loginForm)" id="login" #loginForm="ngForm">
+        <h3>Panel de administrador</h3>
+        <div id="inputs">
+            <input type="text" name="user" placeholder="Usuario" ngModel required >
+            <input type="password" name="password" placeholder="Contraseña" ngModel required minlength="4">
+        </div>
+        <button [disabled]="loginForm.invalid" click="submit">Entrar</button>
+    </form>
+</section>

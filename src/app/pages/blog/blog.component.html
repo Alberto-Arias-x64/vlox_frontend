@@ -1,0 +1,10 @@
+<section *ngIf="charge; else spinner">
+    <ng-container *ngFor="let dat of data">
+        <app-card-blog [data]="dat"></app-card-blog>
+        <br>
+    </ng-container>
+</section>
+
+<ng-template #spinner>
+    <app-spinner></app-spinner>
+</ng-template>

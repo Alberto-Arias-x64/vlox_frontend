@@ -1,0 +1,30 @@
+footer{
+    width: 100vw;
+    background-color: #BCC5CE;
+}
+#footer_container{
+    max-width: 1600px;
+    margin: 0 auto;
+    
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+#footer_top{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+.footer_links{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+p{
+    cursor: pointer;
+    transition: color ease 200ms;
+}
+p:hover{
+    color: gray;
+}

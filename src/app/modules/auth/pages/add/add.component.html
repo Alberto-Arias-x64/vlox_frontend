@@ -1,0 +1,14 @@
+<section>
+    <form id="add" (ngSubmit)="onSubmit(postForm.value)" #postForm="ngForm">
+        <h1>Crea tu nuevo post</h1>
+        <input ngModel name="title" id="title" type="text" placeholder="Titulo" autofocus autocomplete="off" required="true" >
+        <textarea ngModel name="contend" rows="15" placeholder="contendio" required="true"></textarea>
+        <input ngModel id="file-id" name="image"  type="file" accept="image/png, image/jpeg" required="true">
+        <button [disabled]="!postForm.valid || sending" >
+            <p *ngIf="!sending; else elseBlock ">Publicar</p>
+            <ng-template #elseBlock>
+                <div class="spinner"></div>
+            </ng-template>
+        </button>
+    </form>
+</section>

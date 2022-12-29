@@ -23,7 +23,7 @@ export class BlogComponent implements OnInit {
                 response.forEach( (element:ResponsePost) => {
                     this.charge = true
                     const newItem:Post = {
-                        icon: `http://localhost:3000/storage/${element.image}`,
+                        icon: `/storage/${element.image}`,
                         title: element.title,
                         description: element.data,
                         button: 'Leer Mas...',

@@ -39,7 +39,7 @@ export class PrincipalComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        ajax.get('http://localhost:3000/api/analytics').subscribe(({ response }:AjaxResponse<any>) => {
+        ajax.get('/api/analytics').subscribe(({ response }:AjaxResponse<any>) => {
             this.lastPost = response.lastPost
             this.totalLikes = response.totalLikes
         })

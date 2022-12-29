@@ -21,7 +21,7 @@ export class EditComponent implements OnInit {
     }
 
     edit(id: string) {
-        ajax.get(`http://localhost:3000/api/post/${id}`).subscribe(({ response }: AjaxResponse<any>) => {
+        ajax.get(`/api/post/${id}`).subscribe(({ response }: AjaxResponse<any>) => {
             this.editMode = true
             setTimeout(() => {
                 this.form.setValue({
@@ -35,7 +35,7 @@ export class EditComponent implements OnInit {
 
     onSubmit(values: ApiQuery) {
         this.sending = true
-        ajax.put('http://localhost:3000/api/post', {
+        ajax.put('/api/post', {
             id: values.id,
             title: values.title,
             data: values.contend,

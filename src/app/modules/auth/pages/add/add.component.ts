@@ -22,9 +22,9 @@ export class AddComponent implements OnInit {
         const image: any = document.getElementById("file-id")
         const bodyContent = new FormData()
         bodyContent.append('storage', image.files[0])
-        ajax.post('http://localhost:3000/api/image', bodyContent).subscribe({
+        ajax.post('/api/image', bodyContent).subscribe({
             next: ({ response }: any) => {
-                ajax.post('http://localhost:3000/api/post', {
+                ajax.post('/api/post', {
                     title: element.title,
                     data: element.contend,
                     image: response.file

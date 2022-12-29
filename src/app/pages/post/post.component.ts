@@ -21,13 +21,13 @@ export class PostComponent implements OnInit {
     }
 
     getPost(id: string): void {
-        ajax.get(`http://localhost:3000/api/post/${id}`).subscribe({
+        ajax.get(`/api/post/${id}`).subscribe({
             next: ({ response }: any) => {
                 this.data.description = response.data
                 this.data.id = response.id
                 this.data.likes = response.likes
                 this.data.title = response.title
-                this.data.icon = `http://localhost:3000/storage/${response.image}`
+                this.data.icon = `/storage/${response.image}`
                 const like = window.localStorage.getItem(this.data.id)
                 if (like) this.liked = true
             },
@@ -37,7 +37,7 @@ export class PostComponent implements OnInit {
 
     addLike(): void {
         if (this.liked) return
-        ajax.post('http://localhost:3000/api/analytics/add', { id: this.data.id }).subscribe(() => {
+        ajax.post('/api/analytics/add', { id: this.data.id }).subscribe(() => {
             localStorage.setItem(this.data.id, 'true')
             this.liked = true
             this.data.likes!++
